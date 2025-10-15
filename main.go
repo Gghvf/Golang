@@ -175,28 +175,28 @@ func main() {
 					fmt.Println(result[i])
 				}
 
-			}	
+			}
 			continue
 		}
 
 		if vibor == 2 {
 
 			rmatr2 := razmer()
-			
+
 			if rmatr2 == 1 {
-				
+
 				matr2x2 := matrix12x2()
 
 				var num int
 
-				var result[2][2]int
+				var result [2][2]int
 
 				fmt.Println("Введите число на которое хотите умножить матрицу: ")
 				fmt.Scan(&num)
 				fmt.Scanln()
-				for i := 0; i < 2; i++{
-					for j := 0; j < 2; j++{
-					result[i][j] = matr2x2[i][j] * num
+				for i := 0; i < 2; i++ {
+					for j := 0; j < 2; j++ {
+						result[i][j] = matr2x2[i][j] * num
 					}
 				}
 
@@ -224,7 +224,56 @@ func main() {
 				}
 
 			}
-			continue	
+			continue
+		}
+
+		if vibor == 3 {
+
+			rmatr1 := razmer()
+
+			if rmatr1 == 1 {
+
+				matr12x2 := matrix12x2()
+
+				matr22x2 := matrix22x2()
+
+				var result [2][2]int
+
+				for i := 0; i < 2; i++ {
+					for j := 0; j < 2; j++ {
+						for k := 0; k < 2; k++ {
+							result[i][j] += matr12x2[i][k] * matr22x2[j][k]
+						}
+					}
+				}
+
+				fmt.Println("Результат умножения матриц:")
+				for i := 0; i < 2; i++ {
+					fmt.Println(result[i])
+				}
+				continue
+			} else if rmatr1 == 2 {
+
+				matr13x3 := matrix13x3()
+
+				matr23x3 := matrix23x3()
+
+				var result [3][3]int
+
+				for i := 0; i < 3; i++ {
+					for j := 0; j < 3; j++ {
+						for k := 0; k < 3; k++ {
+							result[i][j] += matr13x3[i][k] * matr23x3[k][j]
+						}
+					}
+				}
+
+				fmt.Println("Результат умножения матриц:")
+				for i := 0; i < 3; i++ {
+					fmt.Println(result[i])
+				}
+			}
+			continue
 		}
 
 		if vibor == 4 {
