@@ -252,7 +252,7 @@ func main() {
 					fmt.Println(result[i])
 				}
 				continue
-			} else if rmatr1 == 2 {
+			} else if rmatr1 == 3 {
 
 				matr13x3 := matrix13x3()
 
