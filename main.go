@@ -242,7 +242,7 @@ func main() {
 				for i := 0; i < 2; i++ {
 					for j := 0; j < 2; j++ {
 						for k := 0; k < 2; k++ {
-							result[i][j] += matr12x2[i][k] * matr22x2[j][k]
+							result[i][j] += matr12x2[i][k] * matr22x2[k][j]
 						}
 					}
 				}
